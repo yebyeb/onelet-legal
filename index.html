@@ -2,58 +2,86 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OneLet — Legal &amp; Support</title>
 <meta name="description" content="Official legal and support pages for OneLet, a word-ladder puzzle game where one letter changes at a time.">
-<meta name="theme-color" content="#161d24">
-<link rel="icon" href="icon.png?v=1">
-<link rel="apple-touch-icon" href="icon.png?v=1">
+<meta name="theme-color" content="#1a1b37">
+<link rel="icon" href="icon-192.png?v=2">
+<link rel="apple-touch-icon" href="icon.png?v=2">
 <style>
-  /* Palette sampled from the app icon itself: deep night blue with a
-     single green accent. Measured values — ground #161d24 (43% of the
-     icon), mid #24373c, accent #588c80. The game uses the same night
-     blue behind every chapter, so the pages and the app agree. */
+  /* Palette taken from the app icon (2026-10): night sky #1a1b37 → violet dusk #3b2a4f,
+     desert dunes #7a4636 / #522425, frosted-glass circles, white letters, warm sand accent. */
   :root{
-    --bg:#141a21; --ink:#f2f6f4; --body:#d2dbd8; --muted:#8f9ba3;
-    --link:#7fc9ae; --line:rgba(210,226,222,.14); --raise:rgba(210,226,222,.05);
+    --sky:#1a1b37; --dusk:#3b2a4f; --dune1:#7a4636; --dune2:#5e3029; --dune3:#462024;
+    --ink:#fbf6f1; --body:#ddd5dc; --muted:#aaa0b2; --sand:#f6c08f;
+    --glass:rgba(255,244,236,.08); --glass-line:rgba(255,244,236,.20);
   }
   *{margin:0;padding:0;box-sizing:border-box}
+  html{background:var(--dune3)}
   body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-       background:var(--bg);color:var(--body);line-height:1.6;padding:44px 20px;
-       max-width:620px;margin:0 auto;text-align:center;
-       background-image:
-         radial-gradient(120% 70% at 50% -10%,rgba(88,140,128,.20) 0%,transparent 62%),
-         radial-gradient(80% 50% at 82% 108%,rgba(60,100,110,.14) 0%,transparent 60%);
-       background-attachment:fixed;min-height:100vh}
-  .icon{width:104px;height:104px;border-radius:23%;margin:0 auto 22px;display:block;
-        box-shadow:0 8px 30px rgba(0,0,0,.55)}
-  h1{font-size:28px;color:var(--ink);margin-bottom:8px;letter-spacing:-.03em}
-  .subtitle{color:var(--muted);font-size:15px;margin-bottom:36px}
-  .links{display:flex;flex-direction:column;gap:12px;margin-bottom:32px}
-  a.btn{display:block;padding:15px 20px;background:var(--raise);
-        border:1px solid var(--line);
-        border-radius:10px;color:var(--link);text-decoration:none;font-weight:600;font-size:16px}
-  a.btn:hover{background:rgba(210,226,222,.10)}
+       color:var(--body);line-height:1.6;text-align:center;min-height:100vh;min-height:100svh;
+       padding:48px 20px calc(34vh + 24px);position:relative;overflow-x:hidden;
+       background:linear-gradient(180deg,var(--sky) 0%,#222146 38%,var(--dusk) 72%,#5a3346 100%)}
+  /* stars — scattered by hand, not a tiled pattern */
+  body::before{content:"";position:absolute;inset:0 0 40% 0;pointer-events:none;opacity:.8;
+    background-image:
+      radial-gradient(1.6px 1.6px at 12% 8%,#fff 60%,transparent 62%),
+      radial-gradient(1.2px 1.2px at 27% 21%,#fff 60%,transparent 62%),
+      radial-gradient(2px 2px at 44% 5%,#fff 60%,transparent 62%),
+      radial-gradient(1.2px 1.2px at 63% 15%,#fff 60%,transparent 62%),
+      radial-gradient(1.8px 1.8px at 81% 7%,#fff 60%,transparent 62%),
+      radial-gradient(1.2px 1.2px at 92% 26%,#fff 60%,transparent 62%),
+      radial-gradient(1.4px 1.4px at 6% 34%,#fff 60%,transparent 62%),
+      radial-gradient(1.2px 1.2px at 74% 38%,#fff 60%,transparent 62%),
+      radial-gradient(1.6px 1.6px at 55% 30%,#fff 60%,transparent 62%),
+      radial-gradient(1.1px 1.1px at 36% 44%,#fff 60%,transparent 62%)}
+  /* dunes — the same three layers as the icon */
+  .dunes{position:absolute;left:0;right:0;bottom:0;height:34vh;min-height:190px;pointer-events:none}
+  .dunes svg{display:block;width:100%;height:100%}
+  main{position:relative;max-width:440px;margin:0 auto}
+  .icon{width:112px;height:112px;border-radius:24%;margin:0 auto 22px;display:block;
+        box-shadow:0 10px 34px rgba(8,6,24,.6),0 0 0 1px rgba(255,255,255,.08)}
+  h1{font-size:30px;color:var(--ink);margin-bottom:6px;letter-spacing:-.02em;font-weight:800}
+  .subtitle{color:var(--body);font-size:15px;margin-bottom:34px}
+  .subtitle span{color:var(--muted)}
+  .links{display:flex;flex-direction:column;gap:12px;margin-bottom:30px}
+  a.btn{display:block;padding:15px 22px;border-radius:999px;text-decoration:none;font-weight:700;font-size:16px;
+        color:var(--ink);background:linear-gradient(180deg,rgba(255,244,236,.13),rgba(255,244,236,.05));
+        border:1px solid var(--glass-line);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 6px 18px rgba(10,6,28,.28);
+        -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+  a.btn:hover{background:rgba(255,244,236,.16)}
   .contact{color:var(--muted);font-size:14px}
-  .contact a{color:var(--link)}
-  footer{margin-top:40px;color:var(--muted);font-size:13px;opacity:.85}
+  .contact a{color:var(--sand)}
+  footer{position:absolute;left:20px;right:20px;bottom:22px;max-width:440px;margin:0 auto;
+         color:rgba(251,236,226,.72);font-size:12.5px;line-height:1.55}
 </style>
 </head>
 <body>
-  <img class="icon" src="icon.png?v=1" alt="OneLet">
-  <h1>OneLet</h1>
-  <p class="subtitle">A word ladder, one letter at a time.<br>
-  Official legal and support pages.</p>
+  <main>
+    <img class="icon" src="icon.png?v=2" alt="OneLet app icon" width="112" height="112">
+    <h1>OneLet</h1>
+    <p class="subtitle">A word ladder, one letter at a time.<br>
+    <span>Official legal and support pages.</span></p>
 
-  <div class="links">
-    <a class="btn" href="privacy.html">Privacy Policy</a>
-    <a class="btn" href="terms.html">Terms of Use</a>
-    <a class="btn" href="support.html">Support &amp; Help</a>
+    <div class="links">
+      <a class="btn" href="privacy.html">Privacy Policy</a>
+      <a class="btn" href="terms.html">Terms of Use</a>
+      <a class="btn" href="support.html">Support &amp; Help</a>
+      <a class="btn" href="credits.html">Credits</a>
+    </div>
+
+    <p class="contact">Questions? <a href="mailto:contact@karayelgames.me" target="_blank" rel="noopener">contact@karayelgames.me</a></p>
+  </main>
+
+  <div class="dunes" aria-hidden="true">
+    <svg viewBox="0 0 400 200" preserveAspectRatio="none">
+      <path d="M0 62 C70 40 130 34 205 46 C270 56 330 30 400 22 L400 200 L0 200Z" fill="#7a4636"/>
+      <path d="M0 104 C80 82 150 92 230 104 C300 114 350 96 400 88 L400 200 L0 200Z" fill="#5e3029"/>
+      <path d="M0 150 C90 138 190 142 270 148 C330 152 370 146 400 142 L400 200 L0 200Z" fill="#462024"/>
+    </svg>
   </div>
 
-  <p class="contact">Questions? <a href="mailto:contact@karayelgames.me" target="_blank" rel="noopener">contact@karayelgames.me</a></p>
-
-  <footer>OneLet is a word puzzle game. Word lists come from open
+  <footer>OneLet is a word puzzle game in ten languages. Word lists come from open
   dictionaries and are curated by hand; a word appearing or not appearing
   in the game is not a statement about the language.</footer>
 </body>

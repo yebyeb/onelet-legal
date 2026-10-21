@@ -5,17 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OneLet — Privacy Policy</title>
 <meta name="description" content="Privacy Policy for OneLet, a word-ladder puzzle game.">
-<meta name="theme-color" content="#161d24">
-<link rel="icon" href="icon.png?v=1">
+<meta name="theme-color" content="#1a1b37">
+<link rel="icon" href="icon-192.png?v=2">
+<link rel="apple-touch-icon" href="icon.png?v=2">
 <style>
+  /* Same palette as the app icon: night sky, violet dusk, desert dunes, sand accent. */
   :root{
-    --bg:#141a21; --ink:#f2f6f4; --body:#d2dbd8; --muted:#8f9ba3;
-    --link:#7fc9ae; --line:rgba(210,226,222,.14); --raise:rgba(210,226,222,.05);
+    --bg:#18172f; --ink:#fbf6f1; --body:#ddd5dc; --muted:#aaa0b2;
+    --link:#f6c08f; --line:rgba(255,236,226,.14); --raise:rgba(255,236,226,.05);
   }
   *{margin:0;padding:0;box-sizing:border-box}
+  html{background:var(--bg)}
   body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-       background:var(--bg);color:var(--body);line-height:1.65;padding:40px 20px 72px;
-       max-width:680px;margin:0 auto}
+       color:var(--body);line-height:1.65;padding:40px 20px 72px;max-width:680px;margin:0 auto;
+       background:linear-gradient(180deg,#1a1b37 0,#211f42 260px,var(--bg) 620px) no-repeat}
   a{color:var(--link)}
   h1{font-size:26px;color:var(--ink);letter-spacing:-.02em;margin-bottom:6px}
   .updated{color:var(--muted);font-size:14px;margin-bottom:30px}
@@ -23,18 +26,20 @@
   p{margin-bottom:12px}
   ul{margin:0 0 12px 22px}
   li{margin-bottom:6px}
-  .note{background:var(--raise);border:1px solid var(--line);border-radius:10px;
+  strong{color:var(--ink)}
+  .note{background:var(--raise);border:1px solid var(--line);border-radius:14px;
         padding:14px 16px;margin:18px 0}
-  .back{display:inline-block;margin-bottom:26px;color:var(--link);text-decoration:none;font-size:15px}
+  .back{display:inline-flex;align-items:center;gap:10px;margin-bottom:26px;color:var(--link);text-decoration:none;font-size:15px}
+  .back img{width:28px;height:28px;border-radius:24%}
   footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);
          color:var(--muted);font-size:13px}
 </style>
 </head>
 <body>
-<a class="back" href="index.html">← OneLet</a>
+<a class="back" href="index.html"><img src="icon-192.png?v=2" alt="">← OneLet</a>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 6 October 2026</p>
+<p class="updated">Last updated: 21 October 2026</p>
 <p>OneLet is available on the Apple App Store (iPhone and iPad) and on Google Play
 (Android). This policy covers both. Where the two platforms differ, the
 difference is stated.</p>
@@ -43,9 +48,15 @@ difference is stated.</p>
 <p>OneLet is a word puzzle game. You change one letter at a time to turn one
 word into another. Every puzzle is generated in advance and shipped inside the
 app, so the game itself works with no internet connection. The only parts that
-use the network are advertising, purchases, and the platform services described
-below (on iOS: iCloud and Game Center; on Android: Google Play Games and Android
-backup).</p>
+use the network are advertising, purchases, the platform services described in
+section 5 (on iOS: iCloud and Game Center; on Android: Google Play Games and Android
+backup), and a time check described below.</p>
+<p><strong>Time check.</strong> So that daily rewards follow the real date, the app
+reads the current time from the response header of our own website
+(karayelgames.me, hosted by GitHub Pages). It sends no data of its own — no
+identifier, no progress, nothing about you. Like any web request it reaches the host
+with your IP address, which GitHub may log under its own privacy statement; we do not
+receive or use it.</p>
 
 <h2>2. Information We Collect</h2>
 <p><strong>We collect nothing.</strong> We have no server, no account system and
@@ -67,11 +78,13 @@ SDK. It does not access your contacts, photos, camera, microphone or location.</
   <li><strong>Rewarded videos — always your choice.</strong> You only see one by
   tapping a button that offers a reward (for example gold or a tool) in exchange.
   Nothing in the game is locked behind one.</li>
-  <li><strong>A banner</strong> at the bottom of the game screen, from level 6.</li>
+  <li><strong>A banner</strong> at the bottom of the screen, from level 6. It is never
+  shown on the store or purchase screens.</li>
   <li><strong>Interstitial ads</strong> between levels, from level 8 — at first
   once every few levels. They never interrupt a puzzle while you are playing it.</li>
 </ul>
-<p>The first five levels show no advertising at all.</p>
+<p>The first five levels show no banner or interstitial ads. All ads are limited to
+content suitable for a general audience.</p>
 <p>To serve those ads, Google's advertising software collects information from
 your device. Depending on your settings this can include advertising identifiers,
 your IP address, device and operating-system details, and interaction data such as
@@ -82,10 +95,10 @@ not by us, and is governed by Google's own policies:</p>
   uses information from sites or apps that use its services</a></li>
   <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
 </ul>
-<p>On iOS, before any tracking takes place, the system asks for your permission
-through Apple's App Tracking Transparency prompt. If you decline, you can still
-play the entire game and still watch rewarded ads — the ads are simply not
-personalised. Declining costs you nothing in this app.</p>
+<p>On iOS, before any tracking takes place, the app shows a short explanation and
+then the system asks for your permission through Apple's App Tracking Transparency
+prompt. If you decline, you can still play the entire game and still watch rewarded
+ads — the ads are simply not personalised. Declining costs you nothing in this app.</p>
 <p>On Android, Google's advertising software may use your device's advertising ID.
 You can reset it or delete it at any time in Android Settings → Privacy → Ads
 (the exact path depends on your device). Without it, ads are not personalised and
@@ -97,10 +110,12 @@ using Google's consent message (a certified consent tool under the IAB Transpare
 <em>Manage options</em> for each purpose and partner — refusing is as easy as
 accepting. If you do not consent, you still see ads and can still watch rewarded
 videos, but they are limited and not personalised. On iOS, Apple's tracking
-prompt is only shown afterwards, and only if you consented. You can change your
-choice at any time in <strong>Settings → Ad privacy choices</strong>. Your choice
-is stored on your device only; if you reinstall the app or use another device, you
-will be asked again.</p>
+prompt is only shown afterwards, and only if you consented.</p>
+<p><strong>In US states with consumer privacy laws</strong>, you can opt out of the
+sale or sharing of your personal information for advertising.</p>
+<p>Wherever these choices apply, you can change them at any time in
+<strong>Settings → Ad privacy choices</strong>. Your choice is stored on your device
+only; if you reinstall the app or use another device, you will be asked again.</p>
 <p>If you would rather not see banner and interstitial ads, the app offers a
 one-time purchase that removes them. See section 6.</p>
 
@@ -109,13 +124,16 @@ one-time purchase that removes them. See section 6.</p>
 standard app storage, so it can remember where you are between sessions:</p>
 <ul>
   <li>your progress — which levels you have finished and how many stars each one
-  earned, and whether today's daily puzzle is solved;</li>
+  earned, a level you left half-finished, and whether today's daily puzzle is solved;</li>
   <li>your gold — the in-game currency — and the tools you own;</li>
   <li>your notebook — the words you have passed through while climbing;</li>
-  <li>your settings — language, sound and vibration;</li>
-  <li>a few small flags — whether the tutorial has been shown, whether a
-  permission request has been answered, whether today's wheel spin or gift box
-  has been used, and which purchases are active on this device.</li>
+  <li>your settings — language, sound, music and haptics;</li>
+  <li>a few small flags — which tutorials have been shown, whether a permission
+  request has been answered, whether today's wheel spin, gift box and daily pack have
+  been used, and which purchases are active on this device;</li>
+  <li>a few device-only measurements — the times of day you usually open the game (so
+  the daily reminder arrives at a sensible hour) and whether your device needs the
+  lighter graphics mode. These never leave the device.</li>
 </ul>
 <p>This is a few kilobytes of text. We cannot read it, retrieve it, or recover
 it for you.</p>
@@ -123,34 +141,37 @@ it for you.</p>
 <h2>5. Platform Services</h2>
 <p><em>On iOS (Apple):</em></p>
 <p><strong>iCloud.</strong> If you are signed in to iCloud, the app keeps a copy
-of the data in section 4 in <em>your own</em> iCloud account, so your progress
-follows you to a new device. This copy is stored by Apple under your Apple ID; we
-have no access to it. You can turn it off in iOS Settings → your name → iCloud.</p>
+of your progress, gold, tools and settings (section 4) in <em>your own</em> iCloud
+account, so they follow you to a new device. This copy is stored by Apple under your
+Apple ID; we have no access to it. You can turn it off in iOS Settings → your name →
+iCloud.</p>
 <p><strong>Game Center.</strong> If you use Game Center, your scores and
 achievements are sent to Apple's Game Center under your Game Center profile and
 may be visible to other players according to your Game Center settings. This is
 Apple's service and is governed by
 <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 <p><em>On Android (Google):</em></p>
+<p><strong>Google Play Games.</strong> If you are signed in to Google Play Games, the
+app keeps a copy of your progress, gold, tools and settings (section 4) as a saved
+game in <em>your own</em> Google account, so they follow you to a new phone. Your
+scores and achievements are also sent to Google Play Games under your Play Games
+profile and may be visible to other players according to your Play Games settings.
+This is Google's service and is governed by the
+<a href="https://policies.google.com/privacy">Google Privacy Policy</a>; we have no
+access to it.</p>
 <p><strong>Android backup.</strong> If backup is turned on for your Google account,
-Android may include the data in section 4 in its own device backup, so your
-progress can come back when you set up a new phone. This copy is stored by Google
-under your Google account; we have no access to it. You can turn it off in
-Android Settings → Google → Backup.</p>
-<p><strong>Google Play Games.</strong> If you use Google Play Games, your scores and
-achievements are sent to Google Play Games under your Play Games profile and may
-be visible to other players according to your Play Games settings. This is
-Google's service and is governed by the
-<a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+Android may also include the game's data in its own device backup. This copy is
+stored by Google under your Google account; we have no access to it. You can turn it
+off in Android Settings → Google → Backup.</p>
 
 <h2>6. Purchases</h2>
-<p>Optional purchases are available: gold packs, a one-time starter pack, a
-one-time purchase that removes banner and interstitial ads, and the Summit Pass
+<p>Optional purchases are available: gold packs, the Journey Pack, a one-time
+purchase that removes banner and interstitial ads, and the Summit Pass
 subscription. Payment is handled entirely by the store you installed the app from —
 Apple through the App Store, or Google through Google Play Billing. We never see
 your name, your card details or your billing address. The app only stores
 which purchases are active.</p>
-<p>If you reinstall the app or change device, use <strong>Restore Purchases</strong>
+<p>If you reinstall the app or change device, use <strong>Restore purchases</strong>
 in Settings. You will not be asked to pay twice. Purchases belong to the store
 account they were made with: a purchase made on the App Store cannot be restored
 on Google Play, and the other way round.</p>
@@ -161,29 +182,32 @@ Subscriptions.</p>
 are a trade you choose to make, and taking them away would punish you for paying.</p>
 
 <h2>7. Notifications</h2>
-<p>If you allow notifications, the app can remind you once a day that a new daily
-puzzle is ready. These are <strong>local notifications</strong>, scheduled by your
-own device during daytime hours only. There is no push server, so no message about
-you ever leaves your phone. You can turn them off at any time in your device's
+<p>If you allow notifications, the app can remind you, at most once a day, that a new
+daily puzzle is ready. These are <strong>local notifications</strong>, scheduled by
+your own device during daytime hours only. There is no push server, so no message
+about you ever leaves your phone. You can turn them off at any time in your device's
 settings (iOS Settings or Android Settings → Apps → OneLet → Notifications).</p>
 
 <h2>8. Children</h2>
 <p>OneLet is suitable for all ages and does not knowingly collect personal
 information from anyone, including children. Because the app shows advertising
-supplied by Google, we request that ads be treated as directed to a general
-audience and served without personalisation where required by law. If you are a
-parent or guardian and have a question about this, please write to us.</p>
+supplied by Google, all ads are restricted to content suitable for a general
+audience, and ads are personalised only where the law and your own settings
+(consent, App Tracking Transparency, Android advertising ID) allow it. If
+you are a parent or guardian and have a question about this, please write to us.</p>
 
 <h2>9. Data Retention and Deletion</h2>
 <p>We hold no data, so there is nothing for us to retain or delete. Everything the
-app stores lives on your device and in your own iCloud account or Android backup,
+app stores lives on your device and in your own iCloud account or Google account,
 and you control it completely:</p>
 <ul>
-  <li><strong>Settings → Delete my data</strong> erases your progress, gold, tools,
-  notebook and settings on this device and in your iCloud copy. Your language and
-  purchase records are kept, so that paying once is enough;</li>
-  <li>deleting the app removes the data on this device; purchases can be brought
-  back with <strong>Restore Purchases</strong>.</li>
+  <li><strong>Settings → Delete your data</strong> starts the game over: it erases
+  your level progress and stars, any half-finished level, your notebook and the
+  tutorials, on this device and in your backup copy. Your gold, tools, settings and
+  purchase records are kept, so nothing you earned or paid for is lost;</li>
+  <li>deleting the app removes all of its data from this device; a backup copy in
+  iCloud or your Google account stays under your control in that account, and
+  purchases can be brought back with <strong>Restore purchases</strong>.</li>
 </ul>
 <p>To ask Google to delete data collected through advertising, use the links in
 section 3; that data is held by Google, not by us.</p>
@@ -193,7 +217,7 @@ section 3; that data is held by Google, not by us.</p>
 objection. These rights are exercised against whoever holds your data. We hold
 none, so there is nothing to request from us. For data collected by Google's
 advertising services, contact Google using the links in section 3; for iCloud and
-Game Center, contact Apple; for Android backup and Google Play Games, contact
+Game Center, contact Apple; for Google Play Games and Android backup, contact
 Google.</p>
 
 <h2>11. Changes to This Policy</h2>
