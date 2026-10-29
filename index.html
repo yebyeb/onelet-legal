@@ -5,25 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OneLet — Legal &amp; Support</title>
 <meta name="description" content="Official legal and support pages for OneLet, a word-ladder puzzle game where one letter changes at a time.">
-<meta name="theme-color" content="#1a1b37">
+<meta name="theme-color" content="#2c1466">
 <link rel="icon" href="icon-192.png?v=3">
 <link rel="apple-touch-icon" href="icon.png?v=3">
 <style>
-  /* Palette taken from the app icon (2026-10): night sky #1a1b37 → violet dusk #3b2a4f,
-     desert dunes #7a4636 / #522425, frosted-glass circles, white letters, warm sand accent. */
+  /* Palette from the 1.0.1 app icon: violet sky #2c1466 → magenta #b8388c → coral #ff8a5c,
+     radiant light at the horizon, violet hills, pine silhouettes #170728,
+     pearl letter circles (#fff4d6 → #ffe6d2) carrying red letters (#d2373f). */
   :root{
-    --sky:#1a1b37; --dusk:#3b2a4f; --dune1:#7a4636; --dune2:#5e3029; --dune3:#462024;
-    --ink:#fbf6f1; --body:#ddd5dc; --muted:#aaa0b2; --sand:#f6c08f;
-    --glass:rgba(255,244,236,.08); --glass-line:rgba(255,244,236,.20);
+    --sky:#2c1466; --mag:#b8388c; --coral:#ff8a5c;
+    --ink:#fff6ea; --body:#f0e2ee; --muted:#d3bcd6; --pink:#ffb0d8;
+    --pearl1:#fff4d6; --pearl2:#ffe6d2; --red:#b42a35;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{background:var(--sky)} /* iOS Safari üst çubuğu buradan boyuyor */
   body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
        color:var(--body);line-height:1.6;text-align:center;min-height:100vh;min-height:100svh;
        padding:48px 20px calc(34vh + 24px);position:relative;overflow-x:hidden;
-       background:linear-gradient(180deg,var(--sky) 0%,#222146 38%,var(--dusk) 72%,#5a3346 100%)}
+       background:linear-gradient(180deg,var(--sky) 0%,#3d1673 30%,#7a2683 56%,var(--mag) 76%,var(--coral) 100%)}
   /* stars — scattered by hand, not a tiled pattern */
-  body::before{content:"";position:absolute;inset:0 0 40% 0;pointer-events:none;opacity:.8;
+  body::before{content:"";position:absolute;inset:0 0 45% 0;pointer-events:none;opacity:.85;
     background-image:
       radial-gradient(1.6px 1.6px at 12% 8%,#fff 60%,transparent 62%),
       radial-gradient(1.2px 1.2px at 27% 21%,#fff 60%,transparent 62%),
@@ -35,25 +36,29 @@
       radial-gradient(1.2px 1.2px at 74% 38%,#fff 60%,transparent 62%),
       radial-gradient(1.6px 1.6px at 55% 30%,#fff 60%,transparent 62%),
       radial-gradient(1.1px 1.1px at 36% 44%,#fff 60%,transparent 62%)}
-  /* dunes — the same three layers as the icon */
-  .dunes{position:absolute;left:0;right:0;bottom:0;height:34vh;min-height:190px;pointer-events:none}
-  .dunes svg{display:block;width:100%;height:100%}
-  main{position:relative;max-width:440px;margin:0 auto}
+  /* the icon's fan of thin light rays, rising from the horizon behind the hills */
+  body::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.24;
+    background:repeating-conic-gradient(from -90deg at 50% calc(100% - 26vh),rgba(255,240,220,.6) 0 .45deg,transparent .45deg 4.5deg);
+    -webkit-mask:radial-gradient(90vmax 90vmax at 50% calc(100% - 26vh),#000 6%,transparent 70%);mask:radial-gradient(90vmax 90vmax at 50% calc(100% - 26vh),#000 6%,transparent 70%)}
+  .hills{position:absolute;left:0;right:0;bottom:0;height:34vh;min-height:190px;pointer-events:none;z-index:1}
+  .hills svg{display:block;width:100%;height:100%}
+  main{position:relative;z-index:2;max-width:440px;margin:0 auto}
   .icon{width:112px;height:112px;border-radius:24%;margin:0 auto 22px;display:block;
-        box-shadow:0 10px 34px rgba(8,6,24,.6),0 0 0 1px rgba(255,255,255,.08)}
+        box-shadow:0 14px 40px rgba(20,4,40,.55),0 0 0 1px rgba(255,255,255,.14)}
   h1{font-size:30px;color:var(--ink);margin-bottom:6px;letter-spacing:-.02em;font-weight:800}
   .subtitle{color:var(--body);font-size:15px;margin-bottom:34px}
   .subtitle span{color:var(--muted)}
   .links{display:flex;flex-direction:column;gap:12px;margin-bottom:30px}
-  a.btn{display:block;padding:15px 22px;border-radius:999px;text-decoration:none;font-weight:700;font-size:16px;
-        color:var(--ink);background:linear-gradient(180deg,rgba(255,244,236,.13),rgba(255,244,236,.05));
-        border:1px solid var(--glass-line);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 6px 18px rgba(10,6,28,.28);
-        -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-  a.btn:hover{background:rgba(255,244,236,.16)}
+  /* buttons are the icon's pearl letter circles: cream face, red lettering */
+  a.btn{display:block;padding:15px 22px;border-radius:999px;text-decoration:none;font-weight:800;font-size:16px;letter-spacing:.01em;
+        color:var(--red);background:radial-gradient(120% 140% at 50% 0,#fff 0,var(--pearl1) 45%,var(--pearl2) 100%);
+        box-shadow:inset 0 -3px 0 rgba(180,90,90,.18),inset 0 1px 0 #fff,0 8px 22px rgba(40,6,50,.38)}
+  a.btn:hover{filter:brightness(1.04)}
+  a.btn:active{transform:translateY(1px)}
   .contact{color:var(--muted);font-size:14px}
-  .contact a{color:var(--sand)}
-  footer{position:absolute;left:20px;right:20px;bottom:22px;max-width:440px;margin:0 auto;
-         color:rgba(251,236,226,.72);font-size:12.5px;line-height:1.55}
+  .contact a{color:var(--pink)}
+  footer{position:absolute;z-index:2;left:20px;right:20px;bottom:22px;max-width:440px;margin:0 auto;
+         color:rgba(255,236,246,.74);font-size:12.5px;line-height:1.55}
 </style>
 </head>
 <body>
@@ -73,11 +78,12 @@
     <p class="contact">Questions? <a href="mailto:contact@karayelgames.me" target="_blank" rel="noopener">contact@karayelgames.me</a></p>
   </main>
 
-  <div class="dunes" aria-hidden="true">
+  <div class="hills" aria-hidden="true">
     <svg viewBox="0 0 400 200" preserveAspectRatio="none">
-      <path d="M0 62 C70 40 130 34 205 46 C270 56 330 30 400 22 L400 200 L0 200Z" fill="#7a4636"/>
-      <path d="M0 104 C80 82 150 92 230 104 C300 114 350 96 400 88 L400 200 L0 200Z" fill="#5e3029"/>
-      <path d="M0 150 C90 138 190 142 270 148 C330 152 370 146 400 142 L400 200 L0 200Z" fill="#462024"/>
+      <path d="M0 70 C60 46 120 40 190 56 C260 72 320 44 400 36 L400 200 L0 200Z" fill="#4a2478"/>
+      <path d="M0 108 C70 88 150 96 225 110 C295 122 350 100 400 94 L400 200 L0 200Z" fill="#3c1a64"/>
+      <path d="M0 146 C90 132 190 138 270 144 C330 148 370 140 400 136 L400 200 L0 200Z" fill="#2a1050"/>
+      <path d="M-6.0 150L1.8 116L9.6 150ZM6.2 152L11.3 130L16.3 152ZM15.1 154L21.5 126L28.0 154ZM27.1 151L36.3 111L45.5 151ZM44.5 153L48.6 135L52.8 153ZM50.9 150L56.9 124L62.9 150ZM61.3 152L69.6 116L77.8 152ZM76.2 154L81.7 130L87.2 154ZM87.8 151L94.7 121L101.6 151ZM98.6 153L103.2 133L107.8 153ZM106.7 150L116.9 106L127.0 150ZM124.5 152L130.5 126L136.5 152ZM136.9 154L144.2 122L151.6 154ZM148.3 151L153.4 129L158.5 151ZM157.2 153L166.0 115L174.7 153ZM172.9 150L179.3 122L185.8 150ZM185.9 152L190.1 134L194.2 152ZM192.4 154L200.2 120L208.0 154ZM205.6 151L211.1 127L216.6 151ZM216.2 153L223.1 123L230.0 153ZM230.0 150L239.2 110L248.4 150ZM244.3 152L249.4 130L254.4 152ZM253.2 154L261.0 120L268.8 154ZM267.4 151L272.5 129L277.5 151ZM278.3 153L284.7 125L291.2 153ZM288.3 150L297.5 110L306.7 150ZM303.7 152L307.8 134L312.0 152ZM312.1 154L318.1 128L324.1 154ZM324.5 151L332.8 115L341.0 151ZM337.4 153L342.9 129L348.4 153ZM347.0 150L353.9 120L360.8 150ZM359.8 152L364.4 132L369.0 152ZM369.9 154L380.1 110L390.2 154ZM385.7 151L391.7 125L397.7 151ZM396.1 153L403.4 121L410.8 153ZM409.5 150L414.6 128L419.7 150ZM0 152 L400 152 L400 200 L0 200Z" fill="#170728"/>
     </svg>
   </div>
 
